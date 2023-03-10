@@ -6,11 +6,9 @@ import { useDispatch, useSelector } from 'react-redux';
 const MovieDetails = () => {
   const dispatch = useDispatch();
   const { movieId } = useParams();
-  const movie = useSelector(state => state.movies.items);
+  const movie = useSelector(state => state.movies.itemDetails);
   const location = useLocation();
   const locRef = useRef(location?.state?.from ?? '/');
-
-  // const { Title, Poster } = movie;
 
   useEffect(() => {
     dispatch(getMovieDetails(movieId));

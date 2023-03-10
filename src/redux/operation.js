@@ -17,6 +17,7 @@ export const getMovieBySearch = createAsyncThunk('movie/fetchMovies', async (nam
 export const getMovieDetails = createAsyncThunk('movie/getDetails', async (id = "tt0499549", { rejectWithValue }) => {
     try {
         const { data } = await axios.get(`?i=${id}&apikey=${API_KEY}`);
+        console.log(data);
         return data;
     } catch (error) {
         return rejectWithValue(error.messege)

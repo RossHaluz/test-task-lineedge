@@ -6,6 +6,7 @@ const moviesSlice = createSlice({
     name: 'movies',
     initialState: {
         items: [],
+        itemDetails: null,
         isLoading: false,
         error: null
     },
@@ -16,7 +17,7 @@ const moviesSlice = createSlice({
             state.error = null;
         },
         [getMovieDetails.fulfilled](state, action) {
-            state.items = action.payload;
+            state.itemDetails = action.payload;
             state.isLoading = false;
             state.error = null;
         }
