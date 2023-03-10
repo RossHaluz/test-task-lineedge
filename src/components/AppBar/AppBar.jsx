@@ -7,7 +7,7 @@ import { Header } from './AppBar.styled';
 const AppBarSearchForm = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar>
         <Header>
           <SearchForm />
         </Header>

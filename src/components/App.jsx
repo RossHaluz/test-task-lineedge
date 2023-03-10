@@ -9,9 +9,9 @@ export const App = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/movies" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path=":movieId" element={<MovieDetailsPage />} />
+          <Route path="movies/:movieId" element={<MovieDetailsPage />} />
         </Route>
       </Routes>
     </>
