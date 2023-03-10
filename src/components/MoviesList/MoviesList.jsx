@@ -5,8 +5,6 @@ import MovieItem from 'components/MovieItem';
 import { useSearchParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import { getMovieBySearch } from 'redux/operation';
-import { ButtonList } from './MoviesList.styled';
-import InfiniteScroll from 'react-infinite-scroll-component';
 
 const MoviesList = () => {
   const movies = useSelector(getMovies);
@@ -38,7 +36,6 @@ const MoviesList = () => {
           })}
         </Grid>
       )}
-      {movies && <ButtonList variant="contained">Load more</ButtonList>}
     </>
   );
 };
