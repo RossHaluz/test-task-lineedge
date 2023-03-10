@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { Link, useLocation, useParams } from 'react-router-dom';
 import { getMovieDetails } from 'redux/operation';
 import { useDispatch, useSelector } from 'react-redux';
+import { MovieDetailsCart, MovieDetailsCartTitle } from './MovieDetails.styled';
 
 const MovieDetails = () => {
   const dispatch = useDispatch();
@@ -18,10 +19,10 @@ const MovieDetails = () => {
     <>
       <Link to={locRef.current}>Go bach</Link>
       {movie && (
-        <>
-          <h2>{movie.Title}</h2>
+        <MovieDetailsCart>
           <img src={movie.Poster} alt={movie.Title} />
-        </>
+          <MovieDetailsCartTitle>{movie.Title}</MovieDetailsCartTitle>
+        </MovieDetailsCart>
       )}
     </>
   );

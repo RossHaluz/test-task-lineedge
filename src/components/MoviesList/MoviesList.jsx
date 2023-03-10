@@ -19,8 +19,6 @@ const MoviesList = () => {
     dispatch(getMovieBySearch(filmName));
   }, [dispatch, filmName]);
 
-  console.log(movies);
-
   return (
     <>
       {movies && (
