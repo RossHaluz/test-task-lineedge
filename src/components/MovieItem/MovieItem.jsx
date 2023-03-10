@@ -11,7 +11,7 @@ const MovieItem = ({ img, title, year, id }) => {
 
   return (
     <Grid item xs={12} md={4}>
-      <Link to={`movies/${id}`} state={{ from: location }}>
+      <Link to={`/${id}`} state={{ from: location }}>
         <Card>
           <CardActionArea>
             <CardMedia component="img" height="500" image={img} alt={title} />
