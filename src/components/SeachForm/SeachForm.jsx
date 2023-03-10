@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
 import { getMovieBySearch } from 'redux/operation';
-import { Button, SearchInput } from './SeachForm.styled';
+import { Button, SearchInput, Form } from './SeachForm.styled';
 
 const SearchForm = () => {
   const dispatch = useDispatch();
@@ -19,10 +19,10 @@ const SearchForm = () => {
   }, [dispatch, filmName]);
 
   return (
-    <form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit}>
       <SearchInput type="text" name="searchValue" placeholder="Search film" />
       <Button type="submit">Search</Button>
-    </form>
+    </Form>
   );
 };
 

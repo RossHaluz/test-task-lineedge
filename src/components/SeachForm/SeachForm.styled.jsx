@@ -16,3 +16,5 @@ export const Button = styled.button`
   padding: 8px;
   cursor: pointer;
 `;
+
+export const Form = styled.form``;
