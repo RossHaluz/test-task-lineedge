@@ -2,7 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const API_KEY = 'f2c94d1b';
-axios.defaults.baseURL = "http://www.omdbapi.com/";
+axios.defaults.baseURL = "https://www.omdbapi.com/";
 
 
 export const getMovieBySearch = createAsyncThunk('movie/fetchMovies', async (name="Batman", {rejectWithValue}) => {
